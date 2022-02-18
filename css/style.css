@@ -1,0 +1,143 @@
+/* index */
+
+*{
+    margin: 10px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+	background-color: #181E1E;
+	overflow-y: auto;
+	overflow-x: auto;
+	text-align: center;
+}
+
+.header {
+    background-color: #f5f5f5;
+    background-image: linear-gradient(to bottom, #DEEB6C, #181E1E);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+    padding: 0 20px;
+}
+
+
+
+/*mi layout en grid, diseñado en layout generator, herramienta online gratuita para diseñar grids*/
+.parent {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr 0.3fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;    
+    text-align: center;
+    background-color: #000000;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 2 / 2; }
+    .div2 { grid-area: 2 / 1 / 3 / 2; }
+    .div3 { grid-area: 3 / 1 / 4 / 2;
+        color: #DEEB6C;
+        text-align: center;
+         } 
+
+/*layout de pagina 2.. la clase es parent2 para diferenciar de la que usa index.html !!! */
+.parent2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    text-align: start;
+    background-color: #000000;
+    }
+    
+    .div01 { grid-area: 1 / 1 / 2 / 2; }
+    .div02 { grid-area: 1 / 2 / 2 / 3; }
+    .div03 { grid-area: 1 / 3 / 2 / 4; }
+    .div04 { grid-area: 2 / 1 / 3 / 2; }
+    .div05 { grid-area: 2 / 2 / 3 / 3; }
+    .div06 { grid-area: 2 / 3 / 3 / 4; }
+    .div07 { grid-area: 3 / 1 / 4 / 2; }
+    .div08 { grid-area: 3 / 2 / 4 / 3; }
+    .div09 { grid-area: 3 / 3 / 4 / 4; }
+    
+
+/*el parametro overflow me facilita la creacion del sitio de manera responsive dentro del container flex que uso para el main*/
+.flex-container {
+    height: 60vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    overflow: scroll;
+}
+/* el parametro justify content:start hace la diferencia del diseño con el index */
+.flexbox {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:start;
+    overflow: scroll
+}
+
+.box {
+    background-color: slateblue;
+    color: #f5f5f5;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    height: 200px;
+    width: 200px;
+    border-radius: 15px;
+    transition: all 2s;
+    /* transition: width 2s, background-color 5s; */
+}
+
+/*media queries recomendados segun google para mobile */
+@media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ }
+@media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */ }
+@media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
+@media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */ } 
+
+
+
+
+
+
+
+
+/*        <!--en div1 pondré header, nav, home, etc-->
+            <div class="div1">
+                <header class="header">
+                    <h1 class="header__title"> 
+                        Entrega 04 y 05 - Ignacio Casco
+                    </h1>
+                    <h4 class="header__subtitle">
+                        Entrega 04 y 05
+                    </h4>
+                </header> 
+            </div>
+        <!--en div2 pondré el main, con un flexbox dentro-->
+            <div class="div2">
+                <main class="flex-container">
+                        <img class="box" src="img/circulito.ico" alt="logo sitio">
+                        <img class="box" src="http://www.fillster.com/images/pictures/10p.jpg" alt="Dog Pictures for Myspace"> 
+                        <img class="box" src="http://www.fillster.com/images/pictures/131z.jpg" alt="Dog Pictures for Myspace">
+                        <img class="box" src="http://www.fillster.com/images/pictures/171x.jpg" alt="Dog Pictures for Myspace">
+                        <img class="box" src="http://www.fillster.com/images/pictures/183h.jpg" alt="Dog Pictures for Myspace">
+                </main>
+            </div>
+                <!--en div3 pondré footer, links, etc-->
+        <div class="div3"> 
+            <footer>
+                <hr>
+                    Ignacio Casco | Coder house | Comisión 24510 | 2022
+            </footer>    
+        </div>
+        */
